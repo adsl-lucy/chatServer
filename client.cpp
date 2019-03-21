@@ -24,7 +24,10 @@ int main()
 		cin >> port;
 	}
 	if(client.connect(SERVER_PORT,"127.0.0.1") == -1)
+	{
+		cerr << "connect error" << endl;
 		exit(0);
+	}
 	else
 		cout<< "welcome to the chatroom" << endl;
 
